@@ -30,7 +30,18 @@ public class Main {
 
 //     Uncomment this block to pass the first stage
      if (!fileContents.isEmpty()) {
-       throw new RuntimeException("Scanner not implemented");
+       StringBuilder ans = new StringBuilder();
+       for (char c : fileContents.toCharArray()) {
+         if (c == '(') {
+           ans.append("LEFT_PAREN ( null\n");
+         } else {
+           ans.append("RIGHT_PAREN ) null\n");
+         }
+       }
+       ans.append("EOF  null");
+       System.out.println(ans);
+     } else {
+       System.out.println("EOF  null");
      }
   }
 }
