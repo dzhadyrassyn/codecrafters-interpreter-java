@@ -37,9 +37,9 @@ public class Main {
          } else if (c == ')') {
            ans.append("RIGHT_PAREN ) null\n");
          } else if (c == '{') {
-           ans.append("LEFT_BRACE { null");
+           ans.append("LEFT_BRACE { null\n");
          } else if (c == '}') {
-           ans.append("RIGHT_BRACE } null");
+           ans.append("RIGHT_BRACE } null\n");
          }
        }
        ans.append("EOF  null");
