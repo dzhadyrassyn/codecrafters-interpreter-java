@@ -34,8 +34,12 @@ public class Main {
        for (char c : fileContents.toCharArray()) {
          if (c == '(') {
            ans.append("LEFT_PAREN ( null\n");
-         } else {
+         } else if (c == ')') {
            ans.append("RIGHT_PAREN ) null\n");
+         } else if (c == '{') {
+           ans.append("LEFT_BRACE { null");
+         } else if (c == '}') {
+           ans.append("RIGHT_BRACE } null");
          }
        }
        ans.append("EOF  null");
