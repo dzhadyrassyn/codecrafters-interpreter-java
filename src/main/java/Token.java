@@ -1,3 +1,5 @@
+import enums.TokenType;
+
 public class Token {
 
     final TokenType type;
