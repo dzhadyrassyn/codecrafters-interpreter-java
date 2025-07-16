@@ -13,3 +13,7 @@ Result: Finished adding parsing for braces. Added Token and TokenType classes
 Target: Other single-character tokens
 
 Result: Added Scanner class that parses the tokens
+
+Target: Add lexical errors
+
+Result: Added Lox class for printing errors

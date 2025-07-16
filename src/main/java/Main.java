@@ -40,5 +40,9 @@ public class Main {
         for (Token token : tokens) {
             System.out.println(token);
         }
+
+        if (Lox.hadError) {
+            System.exit(65);
+        }
     }
 }

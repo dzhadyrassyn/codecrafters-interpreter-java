@@ -41,7 +41,7 @@ public class Scanner {
             case ';' : addToken(TokenType.SEMICOLON); break;
             case '*' : addToken(TokenType.STAR); break;
             default :
-                System.err.println("Unrecognized character: " + c);
+                Lox.error(line, "Unexpected character: " + c);
                 break;
         }
     }
