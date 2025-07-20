@@ -20,6 +20,6 @@ Target: Negation & inequality operators. Relational operators
 Result. Finished 
 
 ### 20.07.2025
-Target: Scanning: Division operator & comments. Ignore whitespace characters. Add String literals parsing
+Target: Scanning: Division operator & comments. Ignore whitespace characters. Add String literals parsing. Add Number literals scanning.
 
-Result: Added logic that ignores comments and identifies slash. Ignored ' ', '\r', '\t'. Increase counter for '\n'. Added "string" scanning
+Result: Added logic that ignores comments and identifies slash. Ignored ' ', '\r', '\t'. Increase counter for '\n'. Added "string" scanning. Added digits scanning
