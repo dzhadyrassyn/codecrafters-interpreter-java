@@ -47,7 +47,14 @@ public class Scanner {
             case '!' : addToken(match('=') ? BANG_EQUAL : BANG); break;
             case '=' : addToken(match('=') ? EQUAL_EQUAL : EQUAL); break;
             case '<' : addToken(match('=') ? LESS_EQUAL : LESS); break;
-            case '>': addToken(match('=') ? GREATER_EQUAL : GREATER); break;
+            case '>' : addToken(match('=') ? GREATER_EQUAL : GREATER); break;
+            case '/' :
+                if (match('/')) {
+                    while (peek() != '\n' && !isAtEnd()) advance();
+                } else {
+                    addToken(SLASH);
+                }
+                break;
             default :
                 Lox.error(line, "Unexpected character: " + c);
                 break;
@@ -56,6 +63,11 @@ public class Scanner {
 
     private char advance() {
         return source.charAt(current++);
+    }
+
+    private char peek() {
+        if (isAtEnd()) return '\0';
+        return source.charAt(current);
     }
 
     private void addToken(TokenType type) {

@@ -15,4 +15,11 @@ Target: Add scanning for: Other single-character tokens, Add lexical errors. Add
 Result: Added Scanner class that parses the tokens. Added Lox class for printing errors. Added Assignment & equality Operators parser.
 
 ### 18.07.2025
-Target: Negation & inequality operators. Relational operators. Add Division operator & comments
+Target: Negation & inequality operators. Relational operators
+
+Result. Finished 
+
+### 20.07.2025
+Target: Scanning: Division operator & comments
+
+Result: Added logic that ignores comments and identifies slash
