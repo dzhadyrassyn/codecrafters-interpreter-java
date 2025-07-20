@@ -23,3 +23,7 @@ Result. Finished
 Target: Scanning: Division operator & comments
 
 Result: Added logic that ignores comments and identifies slash
+
+Target: Ignore whitespace characters
+
+Result: Ignored ' ', '\r', '\t'. Increase counter for '\n'
