@@ -1,6 +1,7 @@
 public abstract class Expr {
 
     static class Binary extends Expr {
+
         final Expr left;
         final Expr right;
         final Token operator;
