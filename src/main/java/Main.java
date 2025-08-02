@@ -28,7 +28,7 @@ public class Main {
         String command = args[0];
         String filename = args[1];
 
-        if (!command.equals("tokenize")) {
+        if (!command.equals("tokenize") && !command.equals("parse")) {
             System.err.println("Unknown command: " + command);
             System.exit(1);
         }
@@ -48,9 +48,14 @@ public class Main {
 
         Scanner scanner = new Scanner(fileContents);
         List<Token> tokens = scanner.scanTokens();
-
-        for (Token token : tokens) {
-            System.out.println(token);
+        if (command.equals("tokenize")) {
+            for (Token token : tokens) {
+                System.out.println(token);
+            }
+        } else if (command.equals("parse")) {
+            Parser parser = new Parser(tokens);
+            Expr expr = parser.parse();
+            System.out.println(new AstPrinter().print(expr));
         }
 
         if (Lox.hadError) {
