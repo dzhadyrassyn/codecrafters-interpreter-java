@@ -55,7 +55,9 @@ public class Main {
         } else if (command.equals("parse")) {
             Parser parser = new Parser(tokens);
             Expr expr = parser.parse();
-            System.out.println(new AstPrinter().print(expr));
+            if (expr != null) {
+                System.out.println(new AstPrinter().print(expr));
+            }
         }
 
         if (Lox.hadError) {
